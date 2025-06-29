@@ -125,13 +125,19 @@
     document.querySelectorAll('.mobile-menu-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const menu = btn.closest('nav').querySelector('.mobile-menu');
-        if(menu) menu.classList.remove('opacity-0', 'pointer-events-none'), menu.classList.add('opacity-100');
+        if(menu) {
+          menu.classList.remove('hidden');
+          menu.classList.add('flex');
+        }
       });
     });
     document.querySelectorAll('.close-mobile-menu').forEach(btn => {
       btn.addEventListener('click', () => {
         const menu = btn.closest('.mobile-menu');
-        if(menu) menu.classList.add('opacity-0', 'pointer-events-none'), menu.classList.remove('opacity-100');
+        if(menu) {
+          menu.classList.add('hidden');
+          menu.classList.remove('flex');
+        }
       });
     });
     </script>
