@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow-pulse': 'glow-pulse 2s ease-in-out infinite alternate',
+                        'slide-up': 'slide-up 0.8s ease-out',
+                        'fade-in': 'fade-in 1s ease-out',
+                        'scale-bounce': 'scale-bounce 0.6s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Header NAV sempre no topo -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md shadow-lg border-b border-white/10" style="height: 56px; min-height: 56px;">
+        <div class="max-w-7xl mx-auto flex items-center justify-center md:justify-between px-2 md:px-6 py-0 relative" style="height: 56px; min-height: 56px;">
+            <div class="relative flex-shrink-0" style="height: 56px;">
+                <img src="img/logo.png" alt="Fast Impressão Digital"
+                     style="height: 48px; margin-top: 4px; margin-bottom: 4px; position: static; display: block;">
+                </div>
+            <div class="hidden md:flex space-x-8 ml-4">
+                <a href="#quem-somos" class="hover:text-pink-400 transition-all duration-300 font-medium">Quem Somos</a>
+                <a href="#servicos" class="hover:text-blue-400 transition-all duration-300 font-medium">Serviços</a>
+                <a href="#trabalhe-conosco" class="hover:text-green-400 transition-all duration-300 font-medium">Revendedor</a>
+                <a href="#contato" class="hover:text-yellow-400 transition-all duration-300 font-medium">Contato</a>
+            </div>
+            <button class="hidden md:block bg-gradient-to-r from-pink-500 to-blue-500 px-4 md:px-6 py-2 rounded-full font-bold neon-glow text-sm md:text-base ml-4" onclick="window.open('https://wa.me/5511957047767','_blank')">
+                ORÇAMENTO GRÁTIS
+            </button>
+        </div>
+    </nav>
+    <div style="margin-top:56px;"></div>
+    <!-- Hero Section com background rotativo de 3 imagens -->
+    <section class="min-h-screen relative overflow-hidden flex items-center" id="hero-section">
+        <div id="hero-bg-1" class="absolute inset-0 transition-all duration-1000 ease-in-out opacity-100 scale-100" style="background: url('img/carrocel/ALEATÓRIA FUNDO 1.png') center center / cover no-repeat;"></div>
+        <div id="hero-bg-2" class="absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-105" style="background: url('img/carrocel/ALEATÓRIA FUNDO 2.png') center center / cover no-repeat;"></div>
+        <div id="hero-bg-3" class="absolute inset-0 transition-all duration-1000 ease-in-out opacity-0 scale-110" style="background: url('img/carrocel/ALEATÓRIA FUNDO 3.png') center center / cover no-repeat;"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/80 to-black/30 z-10"></div>
+        <div id="particles"></div>
+        <div class="max-w-12xl mx-auto px-4 sm:px-6 md:px-12 relative z-30">
+            <div class="max-w-4xl">
+                <div class="flex flex-col items-center text-center">
+                    <img src="img/logotipo.png" alt="Fast Impressão Digital" class="h-48 sm:h-56 md:h-72 lg:h-96 w-auto mt-5 max-w-xs sm:max-w-sm md:max-w-md lg:max-w-xl" style="margin-bottom: 40px; margin-top: 20px;">
+                    <div class="text-center">
+                        <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black leading-tight mb-2">
+                            <span class="block text-white">
+                                <span class="text-blue-400">Qualidade</span>, <span class="text-pink-400">Criatividade</span> e Impacto <span class="text-yellow-400">Visual</span>
+                            </span>
+                        </h1>
+                        <p class="text-sm sm:text-base md:text-lg mb-8 md:mb-12 text-white animate-fade-in" style="animation-delay:1s;">
+                            Transformamos suas <span class="text-pink-300 font-bold">ideias</span> em <span class="text-yellow-400 font-bold"> Arte</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="bg-gradient-to-b from-black via-gray-900 to-black min-h-screen">
+
+    <!-- Quem Somos -->
+    <section id="quem-somos" class="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('img/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+        <div id="carousel-background" class="absolute inset-0 transition-all duration-1000 ease-in-out" style="background-size: cover; background-position: center; background-repeat: no-repeat; filter: brightness(0.3); opacity: 0.7;"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+            <div class="mb-8 sm:mb-12">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black gradient-text mb-4 sm:mb-6 scroll-reveal text-center">QUEM SOMOS</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                    <div class="scroll-reveal">
+                        <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 text-left">
+                            Somos – Fast Impressão Digital<br><br>
+                            Na Fast Impressão Digital, transformamos ideias em impressões com qualidade, agilidade e precisão. Atuamos no mercado de impressão digital oferecendo soluções rápidas e personalizadas para empresas, profissionais e eventos.<br><br>
+                            Com equipamentos modernos e uma equipe comprometida, garantimos atendimento ágil, acabamento impecável e materiais que valorizam sua marca. Seja para pequenas tiragens ou grandes demandas, cuidamos de cada detalhe para entregar sua melhor impressão.<br><br>
+                            Trabalhamos com uma ampla variedade de produtos: cartões de visita, banners, adesivos, panfletos, folders, rótulos e muito mais, e oferecemos serviços de comunicação visual — sempre com atenção às suas necessidades e prazos.<br><br>
+                            Na Fast, acreditamos que imprimir bem é marcar presença.<br>
+                            Valorize sua marca e se comunique com clareza.
+                        </p>
+                    </div>
+                    <!-- Carrossel Moderno -->
+                    <div class="scroll-reveal">
+                        <div class="carousel-container relative overflow-hidden rounded-2xl shadow-2xl group">
+                            <div class="carousel-track flex transition-transform duration-700 ease-in-out will-change-transform items-center h-48 sm:h-60 md:h-80 lg:h-[28rem]">
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img1.jpeg" alt="img1" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img2.jpeg" alt="img2" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img3.jpeg" alt="img3" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img4.jpeg" alt="img4" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img5.jpeg" alt="img5" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img6.jpeg" alt="img6" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img7.jpeg" alt="img7" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img8.jpeg" alt="img8" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img9.jpeg" alt="img9" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img10.jpeg" alt="img10" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img11.jpeg" alt="img11" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img13.jpeg" alt="img13" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img14.jpeg" alt="img14" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                                <div class="carousel-slide min-w-full flex items-center justify-center bg-black/30 rounded-2xl shadow-xl mx-auto p-2 sm:p-4 h-full">
+                                    <img src="img/carrocel/img15.jpeg" alt="img15" class="max-h-full max-w-full object-contain rounded-2xl shadow-lg mx-auto transition-all duration-700" loading="lazy">
+                                </div>
+                            </div>
+                            <!-- Setas maiores -->
+                            <button class="carousel-btn prev absolute left-1 sm:left-2 md:left-4 top-1/2 transform -translate-y-1/2 bg-black/60 hover:bg-pink-500 text-white p-2 sm:p-3 md:p-4 lg:p-5 rounded-full transition-all duration-300 z-10 group-hover:scale-110 focus:outline-none focus:ring-2 focus:ring-pink-400 shadow-lg" aria-label="Anterior">
+                                <svg class="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                                </svg>
+                            </button>
+                            <button class="carousel-btn next absolute right-1 sm:right-2 md:right-4 top-1/2 transform -translate-y-1/2 bg-black/60 hover:bg-blue-500 text-white p-2 sm:p-3 md:p-4 lg:p-5 rounded-full transition-all duration-300 z-10 group-hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-400 shadow-lg" aria-label="Próximo">
+                                <svg class="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </button>
+                            <!-- Indicadores maiores -->
+                            <div class="carousel-indicators absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 sm:space-x-3 z-10">
+                                <!-- Os indicadores serão gerados dinamicamente pelo JS -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços & Diferenciais -->
+    <section id="servicos" class="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-8 sm:mb-12 md:mb-16">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black gradient-text mb-6 sm:mb-8 scroll-reveal"> </h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12 md:mb-16">
+                <div id="card-servico-1" class="bg-gradient-to-br from-pink-500/20 to-pink-900/10 border border-pink-500/30 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 flex flex-col items-center text-center scroll-reveal hover:scale-105 hover:shadow-2xl hover:shadow-pink-400/20 transition-all duration-300 ease-in-out cursor-pointer group">
+                    <div class="text-4xl sm:text-5xl mb-3 sm:mb-4 text-pink-400 group-hover:scale-110 group-hover:animate-bounce transition-all duration-300"><span>💡</span></div>
+                    <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100 font-medium group-hover:text-white transition-colors duration-300">
+                        Na Fast Impressão Digital, transformamos ideias em impressões com qualidade, agilidade e precisão. Atuamos no mercado de impressão digital oferecendo soluções rápidas e personalizadas para empresas, profissionais e eventos.
+                    </p>
+                </div>
+                <div id="card-servico-2" class="bg-gradient-to-br from-blue-500/20 to-blue-900/10 border border-blue-500/30 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 flex flex-col items-center text-center scroll-reveal hover:scale-105 hover:shadow-2xl hover:shadow-blue-400/20 transition-all duration-300 ease-in-out cursor-pointer group">
+                    <div class="text-4xl sm:text-5xl mb-3 sm:mb-4 text-blue-400 group-hover:scale-110 group-hover:animate-pulse transition-all duration-300"><span>⚡</span></div>
+                    <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100 font-medium group-hover:text-white transition-colors duration-300">
+                        Com equipamentos modernos e uma equipe comprometida, garantimos atendimento ágil, acabamento impecável e materiais que valorizam sua marca. Seja para pequenas tiragens ou grandes demandas, cuidamos de cada detalhe para entregar sua melhor impressão.
+                    </p>
+                </div>
+                <div id="card-servico-3" class="bg-gradient-to-br from-yellow-400/20 to-yellow-900/10 border border-yellow-400/30 rounded-3xl shadow-2xl p-6 sm:p-8 md:p-10 flex flex-col items-center text-center scroll-reveal hover:scale-105 hover:shadow-2xl hover:shadow-yellow-200/20 transition-all duration-300 ease-in-out cursor-pointer group">
+                    <div class="text-4xl sm:text-5xl mb-3 sm:mb-4 text-yellow-300 group-hover:scale-110 group-hover:animate-spin transition-all duration-300"><span>🛠️</span></div>
+                    <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-100 font-medium group-hover:text-white transition-colors duration-300">
+                        Trabalhamos com uma ampla variedade de serviços: cartões de visita, banners, adesivos, panfletos, folders, rótulos e muito mais, e oferecemos serviços de comunicação visual — sempre com atenção às suas necessidades e prazos.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mb-6 sm:mb-8 md:mb-10">
+                <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold gradient-text mb-4 sm:mb-6 scroll-reveal">Diferenciais Competitivos</h3>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+                <div class="bg-gray-900/80 rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col items-center text-center scroll-reveal hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 transition-all duration-300 ease-in-out cursor-pointer group">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 text-yellow-400 group-hover:scale-110 group-hover:animate-bounce transition-all duration-300">👥</div>
+                    <h4 class="text-sm sm:text-base md:text-lg font-bold text-yellow-400 mb-1 sm:mb-2 group-hover:text-yellow-300 transition-colors duration-300">Atendimento personalizado</h4>
+                    <p class="text-xs sm:text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Oferecemos um atendimento exclusivo, focado nas suas necessidades.</p>
+                </div>
+                <div class="bg-gray-900/80 rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col items-center text-center scroll-reveal hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 transition-all duration-300 ease-in-out cursor-pointer group">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 text-yellow-400 group-hover:scale-110 group-hover:animate-pulse transition-all duration-300">⚡</div>
+                    <h4 class="text-sm sm:text-base md:text-lg font-bold text-yellow-400 mb-1 sm:mb-2 group-hover:text-yellow-300 transition-colors duration-300">Rapidez na entrega</h4>
+                    <p class="text-xs sm:text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Entregamos seus projetos com agilidade, sem comprometer a qualidade.</p>
+                </div>
+                <div class="bg-gray-900/80 rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col items-center text-center scroll-reveal hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 transition-all duration-300 ease-in-out cursor-pointer group">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 text-yellow-400 group-hover:scale-110 group-hover:animate-spin transition-all duration-300">💻</div>
+                    <h4 class="text-sm sm:text-base md:text-lg font-bold text-yellow-400 mb-1 sm:mb-2 group-hover:text-yellow-300 transition-colors duration-300">Tecnologia de ponta</h4>
+                    <p class="text-xs sm:text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Utilizamos equipamentos modernos para garantir resultados impecáveis.</p>
+                </div>
+                <div class="bg-gray-900/80 rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col items-center text-center scroll-reveal hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 transition-all duration-300 ease-in-out cursor-pointer group">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 text-yellow-400 group-hover:scale-110 group-hover:animate-ping transition-all duration-300">🎯</div>
+                    <h4 class="text-sm sm:text-base md:text-lg font-bold text-yellow-400 mb-1 sm:mb-2 group-hover:text-yellow-300 transition-colors duration-300">Qualidade e alta resolução</h4>
+                    <p class="text-xs sm:text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Garantimos impressões de alta qualidade e resolução para sua marca.</p>
+                </div>
+                <div class="bg-gray-900/80 rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col items-center text-center scroll-reveal hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 transition-all duration-300 ease-in-out cursor-pointer group">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 text-yellow-400 group-hover:scale-110 group-hover:animate-bounce transition-all duration-300">🏪</div>
+                    <h4 class="text-sm sm:text-base md:text-lg font-bold text-yellow-400 mb-1 sm:mb-2 group-hover:text-yellow-300 transition-colors duration-300">Varejo e Atacado</h4>
+                    <p class="text-xs sm:text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Atendemos tanto clientes individuais quanto grandes demandas.</p>
+                </div>
+                <div class="bg-gray-900/80 rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col items-center text-center scroll-reveal hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 transition-all duration-300 ease-in-out cursor-pointer group">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 text-yellow-400 group-hover:scale-110 group-hover:animate-pulse transition-all duration-300">📦</div>
+                    <h4 class="text-sm sm:text-base md:text-lg font-bold text-yellow-400 mb-1 sm:mb-2 group-hover:text-yellow-300 transition-colors duration-300">Variedade de produtos</h4>
+                    <p class="text-xs sm:text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Oferecemos uma ampla gama de produtos para atender suas necessidades.</p>
+                </div>
+                <div class="bg-gray-900/80 rounded-2xl shadow-lg p-4 sm:p-6 flex flex-col items-center text-center scroll-reveal hover:scale-105 hover:shadow-2xl hover:shadow-yellow-400/20 transition-all duration-300 ease-in-out cursor-pointer group">
+                    <div class="text-2xl sm:text-3xl mb-2 sm:mb-3 text-yellow-400 group-hover:scale-110 group-hover:animate-bounce transition-all duration-300">📍</div>
+                    <h4 class="text-sm sm:text-base md:text-lg font-bold text-yellow-400 mb-1 sm:mb-2 group-hover:text-yellow-300 transition-colors duration-300">Localização estratégica</h4>
+                    <p class="text-xs sm:text-sm text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Estamos localizados em um ponto de fácil acesso para sua conveniência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOVA SEÇÃO SERVIÇOS 2 -->
+    <section id="servicos2" class="relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+        <!-- Fundo dinâmico -->
+        <div id="carousel-background-servicos2"
+             class="absolute inset-0 pointer-events-none"
+             style="z-index: 0;"></div>
+        <div class="absolute inset-0 bg-black/40 pointer-events-none" style="z-index: 10;"></div>
+        <div class="absolute inset-0 bg-blue-900/60 pointer-events-none" style="z-index: 15;"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 relative" style="z-index: 20;">
+            <div class="text-center mb-6 sm:mb-8 md:mb-10">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black gradient-text mb-4 sm:mb-6 scroll-reveal">CONHEÇA NOSSOS SERVIÇOS:</h2>
+                <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-4 sm:mb-6 scroll-reveal">
+                    Aqui na <span class="font-bold text-yellow-400">FAST IMPRESSÃO DIGITAL</span>, atendemos o seu projeto desde a criação de arte, execução e instalação.<br><br>
+                    A <span class="font-bold text-pink-400">Comunicação Visual</span> é a alma da sua empresa! É através dela que o seu público reconhece e se conecta com a sua marca. Na Fast transformamos sua ideia em projetos de alto impacto.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-6 sm:mb-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-900/80 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transition-all duration-1000 opacity-0 translate-y-8 hover:scale-105 hover:shadow-blue-500/30 group cursor-pointer" onclick="openModalServico('img/carrocel/img15.jpeg')">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Adesivo perfurado</h3>
+                    <p class="text-gray-200 text-base mb-2">Comunique-se com o seu público alvo de forma assertiva! O adesivo perfurado possui microperfurações que captam a luz natural, trazendo assim um efeito de visualização ampla de dentro para fora e privacidade interna, de fora para dentro.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-gray-900/80 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transition-all duration-1000 opacity-0 translate-y-8 hover:scale-105 hover:shadow-blue-500/30 group cursor-pointer" onclick="openModalServico('img/carrocel/ADESIVO JATEADO.png')">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Adesivo jateado</h3>
+                    <p class="text-gray-200 text-base mb-2">O adesivo jateado pode ser aplicado em ambientes internos e externos, trazendo um efeito visual semelhante ao vidro jateado em superfícies de vidro. Não impede a passagem de luz, mas traz privacidade impedindo uma visão clara através do vidro.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-gray-900/80 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transition-all duration-1000 opacity-0 translate-y-8 hover:scale-105 hover:shadow-blue-500/30 group cursor-pointer" onclick="openModalServico('img/carrocel/img5.jpeg')">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Adesivos e lacres</h3>
+                    <p class="text-gray-200 text-base mb-2">Adesivos personalizados com impressão em alta qualidade e acabamento. Lacre de segurança para garantir a não violação do seu produto no trajeto.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-gray-900/80 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transition-all duration-1000 opacity-0 translate-y-8 hover:scale-105 hover:shadow-blue-500/30 group cursor-pointer" onclick="openModalServico('img/carrocel/ENCADERNAÇÃO 1.png')">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Impressão e encadernação em espiral</h3>
+                    <p class="text-gray-200 text-base mb-2">Muito utilizada para trabalhos escolares e universitários, apostilas ou relatórios empresariais.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-gray-900/80 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transition-all duration-1000 opacity-0 translate-y-8 hover:scale-105 hover:shadow-blue-500/30 group cursor-pointer" onclick="openModalServico('img/carrocel/ADESIVO PLOTADO 2.png')">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Plotagem</h3>
+                    <p class="text-gray-200 text-base mb-2">Utilizados geralmente em vitrines, veículos, placas e decoração, com alta durabilidade e resistência à mudanças de temperaturas.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-gray-900/80 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transition-all duration-1000 opacity-0 translate-y-8 hover:scale-105 hover:shadow-blue-500/30 group cursor-pointer" onclick="openModalServico('img/carrocel/MATERIAIS GRAFICOS 2.png')">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Materiais Gráficos</h3>
+                    <p class="text-gray-200 text-base mb-2">Materiais Gráficos de alta qualidade para destacar a sua marca no mercado! Cartões de visita, panfletos e folders.</p>
+                </div>
+               
+                <!-- Card 8 -->
+                <div class="bg-gray-900/80 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transition-all duration-1000 opacity-0 translate-y-8 hover:scale-105 hover:shadow-blue-500/30 group cursor-pointer" onclick="openModalServico('img/carrocel/BANNER ROLLUP 1.png')">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Banner rollup</h3>
+                    <p class="text-gray-200 text-base mb-2">Com acabamento slim e prático, permitindo uma comunicação assertiva. Possui um suporte metálico com sistema de enrolamento, com maior durabilidade não só da estrutura, mas também da comunicação impressa, por ficar "guardada" quando o banner é fechado. Sistema simples, prático e sofisticado!</p>
+                </div>
+                <!-- Card 9 -->
+                <div class="bg-gray-900/80 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transition-all duration-1000 opacity-0 translate-y-8 hover:scale-105 hover:shadow-blue-500/30 group cursor-pointer" onclick="openModalServico('img/carrocel/img11.jpeg')">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Placa em Acm / Lona Impressa e PS cristal</h3>
+                    <p class="text-gray-200 text-base mb-2">A fachada de um estabelecimento é o primeiro contato visual que o cliente tem com o negócio. Por isso, a placa na fachada exerce um papel fundamental na comunicação visual da empresa. Mais do que um simples item decorativo, ela é uma poderosa ferramenta de marketing e identificação.</p>
+                </div>
+                <!-- Card 10 -->
+                <div class="bg-gray-900/80 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transition-all duration-1000 opacity-0 translate-y-8 hover:scale-105 hover:shadow-blue-500/30 group cursor-pointer" onclick="openModalServico('img/carrocel/PAPEL DE PAREDE 1.png')">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Papel de parede</h3>
+                    <p class="text-gray-200 text-base mb-2">Quer dar vida nova ao seu espaço de forma rápida, prática e com muito estilo?! O papel de parede impresso personalizado é a escolha ideal para transformar ambientes com personalidade e exclusividade!</p>
+                </div>
+                <!-- Card 11 -->
+                <div class="bg-gray-900/80 rounded-3xl shadow-2xl p-8 flex flex-col items-center text-center transition-all duration-1000 opacity-0 translate-y-8 hover:scale-105 hover:shadow-blue-500/30 group cursor-pointer" onclick="openModalServico('img/carrocel/BANNER ROLLUP 2.png')">
+                    <h3 class="text-xl font-bold text-blue-300 mb-2">Banner revenda</h3>
+                    <p class="text-gray-200 text-base mb-2">Banner para revenda, ideal para comunicação visual de parceiros e revendedores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- FIM SERVIÇOS 2 -->
+
+    <!-- Modal para exibir imagem do serviço -->
+    <div id="modal-servico" class="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] hidden transition-all duration-1000 opacity-0">
+        <div class="relative max-w-lg w-full flex flex-col items-center">
+            <button onclick="closeModalServico()" class="absolute top-2 right-2 text-white text-3xl font-bold bg-black/60 rounded-full w-10 h-10 flex items-center justify-center hover:bg-red-600 transition-all">&times;</button>
+            <img id="modal-servico-img" src="" alt="Imagem do serviço" class="max-h-[70vh] w-auto rounded-2xl shadow-2xl border-4 border-white transition-all duration-1000 scale-95 opacity-0">
+        </div>
+    </div>
+
+    <!-- TRABALHE CONOSCO -->
+    <section id="trabalhe-conosco" class="py-20 bg-black relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('img/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+        <!-- Background dinâmico do carrossel -->
+        <div id="carousel-background-trabalhe" class="absolute inset-0 transition-all duration-1000 ease-in-out" style="background-size: cover; background-position: center; background-repeat: no-repeat; filter: brightness(0.3); opacity: 0.7;"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-black gradient-text mb-8 scroll-reveal">SEJA UM REVENDEDOR</h2>
+                <p class="text-lg md:text-xl text-gray-400 scroll-reveal max-w-4xl mx-auto">
+                    Seja um revendedor de impressão digital e lucre com produtos de alta qualidade!<br><br>
+                    Que tal aumentar o seu lucro sem precisar investir em máquinas?! Aqui na Fast oferecemos tabela diferenciada para revenda, tendo como diferencial competitivo a confecção própria.<br><br>
+                    Materiais de alta qualidade, com agilidade na entrega e ótimos preços!<br><br>
+                    Ofereça uma linha completa para os seus clientes, sem complicação. Você foca nas vendas, e nós cuidamos da produção com qualidade e eficiência!!!
+                </p>
+                <div class="mt-12 flex flex-col md:flex-row justify-center gap-6">
+                    <a href="https://wa.me/5511951683607" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg transition-all text-lg" target="_blank">
+                        <span class="flex items-center justify-center">
+                            <span class="mr-2">📱</span> WhatsApp
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- POR QUE ESCOLHER A FAST -->
+     <section id="porque-fast" class="py-20 bg-gray-900 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="ml-4 pl-2">
+                    <h2 class="text-5xl md:text-6xl font-black gradient-text mb-8 scroll-reveal">POR QUE ESCOLHER A FAST?</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-6 scroll-reveal">
+                            <div class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-xl flex items-center justify-center animate-glow-pulse"><span class="text-2xl">⚡</span></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-pink-400 mb-2">ENTREGA EXPRESSA</h3>
+                                <p class="text-gray-300 text-base">Projetos entregues em tempo recorde sem perder qualidade</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6 scroll-reveal" style="transition-delay:0.2s;">
+                            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-pink-500 rounded-xl flex items-center justify-center animate-glow-pulse"><span class="text-2xl">🎯</span></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-blue-400 mb-2">PRECISÃO TOTAL</h3>
+                                <p class="text-gray-300 text-base">Cada detalhe cuidadosamente analisado para perfeição</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-6 scroll-reveal" style="transition-delay:0.4s;">
+                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl flex items-center justify-center animate-glow-pulse"><span class="text-2xl">💎</span></div>
+                            <div>
+                                <h3 class="text-xl font-bold text-yellow-400 mb-2">QUALIDADE PREMIUM</h3>
+                                <p class="text-gray-300 text-base">Equipamentos e materiais de primeira linha</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-reveal">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-3xl opacity-20 blur-xl"></div>
+                        <div class="relative glass-effect p-12 rounded-3xl border border-white/10">
+                            <div class="text-center space-y-8">
+                                <div>
+                                    <div class="text-5xl font-black gradient-text mb-2"><span class="counter" data-target="12" data-suffix="+">0</span></div>
+                                    <p class="text-gray-300 text-base">Anos de Experiência</p>
+                                </div>
+                                <div>
+                                    <div class="text-5xl font-black gradient-text mb-2">
+                                        <span class="counter" data-target="10000" data-suffix="K+">0</span>
+                                    </div>
+                                    <p class="text-gray-300 text-base">Projetos Realizados</p>
+                                </div>
+                                <div>
+                                    <div class="text-5xl font-black gradient-text mb-2">
+                                        <span class="counter" data-target="100" data-suffix="%">0</span>
+                                    </div>
+                                    <p class="text-gray-300 text-base">Satisfação Garantida</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+ 
+
+   <section>
+    <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<!-- Elfsight Google Reviews | Untitled Google Reviews -->
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-3e8aea0c-5ff8-491d-bb9a-4148b747c425" data-elfsight-app-lazy></div>
+
+    <!-- Footer -->
+    <footer id="contato" class="bg-black py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Mapa ocupa as duas primeiras colunas -->
+                <div class="md:col-span-2 scroll-reveal">
+                    <div class="rounded-2xl overflow-hidden shadow-lg" style="min-height:200px;">
+                        <iframe
+                            src="https://www.google.com/maps?q=R.+Zambeze,+224+-+Vila+Carr%C3%A3o,+S%C3%A3o+Paulo+-+SP,+03441-000&output=embed"
+                            width="100%"
+                            height="200"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <!-- CONTATO -->
+                <div class="scroll-reveal">
+                    <h4 class="text-lg font-bold mb-3 text-yellow-400">CONTATO</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li>📱 (11)95704-7767</li>
+                        <li>✉️ fast.dkprint@gmail.com</li>
+                        <li>📍 São Paulo, SP</li>
+                        <li>🕒 Seg-Sex: 8h às 18h</li>
+                    </ul>
+                </div>
+                <!-- REDES SOCIAIS -->
+                <div class="scroll-reveal">
+                    <h4 class="text-lg font-bold mb-3 text-yellow-400">REDES SOCIAIS</h4>
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/fastdkprint/" class="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 transition-all neon-glow" target="_blank"><span class="font-bold text-sm">f</span></a>
+                        <a href="https://www.instagram.com/explore/locations/111919991400090/fast-impressao-digital-comunicacao-visual/recent/" class="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center hover:scale-110 transition-all neon-glow" target="_blank"><span class="font-bold text-sm">@</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 FAST. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Ícone WhatsApp fixo -->
+    <a href="https://wa.me/5511957047767" target="_blank" aria-label="WhatsApp" style="position:fixed;right:30px;bottom:30px;z-index:1000;">
+      <img src="img/WhatsApp.png" alt="WhatsApp" style="width:52px;height:52px;display:block;">
+    </a>
+
+    <script src="js/main.js"></script>
+
+    <script>
+    function toggleDropdown(button) {
+        const content = button.nextElementSibling;
+        const arrow = button.querySelector('span:last-child');
+        if (content.style.display === 'block') {
+            content.style.display = 'none';
+            arrow.textContent = '▼';
+                        } else {
+            content.style.display = 'block';
+            arrow.textContent = '▲';
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // ... outros códigos ...
+        // Fade-up animado para os cards de serviços 2
+        const cards = document.querySelectorAll('#servicos2 .grid > div.bg-gray-900\\/80');
+        cards.forEach((card, i) => {
+            setTimeout(() => {
+                card.classList.remove('opacity-0', 'translate-y-8');
+                card.classList.add('opacity-100', 'translate-y-0');
+            }, 200 + i * 180);
+        });
+    });
+
+    window.addEventListener('beforeunload', function() {
+        const cards = document.querySelectorAll('#servicos2 .grid > div.bg-gray-900\\/80');
+        cards.forEach((card, i) => {
+            card.classList.remove('opacity-100', 'translate-y-0');
+            card.classList.add('opacity-0', 'translate-y-8');
+        });
+    });
+    </script>
+
+</body>
+</html>
