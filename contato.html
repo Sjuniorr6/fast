@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Fast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow-pulse': 'glow-pulse 2s ease-in-out infinite alternate',
+                        'slide-up': 'slide-up 0.8s ease-out',
+                        'fade-in': 'fade-in 1s ease-out',
+                        'scale-bounce': 'scale-bounce 0.6s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black text-white overflow-x-hidden relative">
+  <div class="fixed inset-0 z-0" style="background: url('img/carrocel/img10.jpeg') center center / cover no-repeat; filter: brightness(0.45);"></div>
+  <div class="fixed inset-0 z-0 bg-black/60"></div>
+    <!-- Header NAV sempre no topo -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md shadow-lg border-b border-white/10" style="height: 56px; min-height: 56px;">
+        <div class="max-w-7xl mx-auto flex items-center justify-center md:justify-between px-2 md:px-6 py-0 relative" style="height: 56px; min-height: 56px;">
+            <div class="relative flex-shrink-0" style="height: 56px;">
+                <img src="img/logotipo.png" alt="Fast Impressão Digital"
+                     style="height: 100px; margin-top: -25px; margin-bottom: 4px; position: static; display: block;">
+                </div>
+            <div class="flex items-center ml-2">
+                <button class="mobile-menu-btn flex md:hidden items-center justify-center w-10 h-10 text-white border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Abrir menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-menu fixed inset-0 bg-black/30 backdrop-blur-lg z-50 hidden flex items-center justify-center min-h-screen">
+                <div class="absolute inset-0 bg-black/20 backdrop-blur-xl"></div>
+                <div class="relative z-10 w-11/12 max-w-md mx-auto bg-white/10 backdrop-blur-2xl rounded-3xl shadow-2xl flex flex-col items-center justify-center py-20 px-8 space-y-12 min-h-[90vh] max-h-[95vh] overflow-y-auto border border-white/20">
+                    <button class="close-mobile-menu absolute top-6 right-6 text-white text-4xl">&times;</button>
+                    <a href="index.html" class="hover:text-pink-400 transition-all text-2xl font-bold">Home</a>
+                    <a href="quem-somos.html" class="hover:text-pink-400 transition-all text-2xl font-bold">Quem Somos</a>
+                    <a href="servicos.html" class="hover:text-blue-400 transition-all text-2xl font-bold">Serviços</a>
+                    <a href="trabalhe-conosco.html" class="hover:text-green-400 transition-all text-2xl font-bold">Revendedor</a>
+                    <a href="contato.html" class="hover:text-yellow-400 transition-all text-2xl font-bold">Contato</a>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-8 ml-4">
+                <a href="index.html" class="hover:text-pink-400 transition-all duration-300 font-medium">Home</a>
+                <a href="quem-somos.html" class="hover:text-pink-400 transition-all duration-300 font-medium">Quem Somos</a>
+                <a href="servicos.html" class="hover:text-blue-400 transition-all duration-300 font-medium">Serviços</a>
+                <a href="trabalhe-conosco.html" class="hover:text-green-400 transition-all duration-300 font-medium">Revendedor</a>
+                <a href="contato.html" class="hover:text-yellow-400 transition-all duration-300 font-medium">Contato</a>
+            </div>
+            <button class="hidden md:block bg-gradient-to-r from-pink-500 to-blue-500 px-4 md:px-6 py-2 rounded-full font-bold neon-glow text-sm md:text-base ml-4" onclick="window.open('https://wa.me/5511957047767','_blank')">
+                ORÇAMENTO GRÁTIS
+            </button>
+        </div>
+    </nav>
+    <div style="margin-top:56px;"></div>
+
+    <main class="min-h-screen flex flex-col justify-center items-center bg-black pt-24 pb-12">
+      <section class="w-full max-w-6xl mx-auto bg-gradient-to-br from-gray-900/95 to-black/95 rounded-3xl shadow-2xl p-0 md:p-0 flex flex-col items-center z-10 relative overflow-hidden">
+        <div class="flex flex-col md:flex-row w-full h-full items-stretch">
+          <!-- Mapa -->
+          <div class="flex-1 min-w-[260px] max-w-md flex flex-col items-center justify-center border-b-2 md:border-b-0 md:border-r-2 border-blue-500/30 overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps?q=R.+Zambeze,+224+-+Vila+Carr%C3%A3o,+S%C3%A3o+Paulo+-+SP,+03441-000&output=embed"
+              width="100%"
+              height="320"
+              style="border:0; min-height:260px; min-width:100%;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <!-- Contato -->
+          <div class="flex-1 flex flex-col items-center justify-center px-6 py-10 gap-8">
+            <h2 class="text-3xl md:text-4xl font-black gradient-text mb-2 text-center">Fale com a FAST</h2>
+            <ul class="space-y-6 w-full max-w-xs mx-auto text-lg">
+              <li class="flex items-center gap-4">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-green-400 to-blue-500 text-white text-2xl shadow"><svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' class='w-7 h-7'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 5.75A2.75 2.75 0 015.75 3h12.5A2.75 2.75 0 0121 5.75v12.5A2.75 2.75 0 0118.25 21H5.75A2.75 2.75 0 013 18.25V5.75z' /><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01' /></svg></span>
+                <a href="tel:+5511957047767" class="hover:text-green-400 font-semibold transition-all">(11) 95704-7767</a>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-yellow-400 to-pink-500 text-white text-2xl shadow"><svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' class='w-7 h-7'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M16 12H8m0 0l4-4m-4 4l4 4' /></svg></span>
+                <a href="mailto:fast.dkprint@gmail.com" class="hover:text-yellow-400 font-semibold transition-all">fast.dkprint@gmail.com</a>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 text-white text-2xl shadow"><svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' class='w-7 h-7'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 16.657A8 8 0 1116.657 17.657M15 11a3 3 0 11-6 0 3 3 0 016 0z' /></svg></span>
+                <span class="font-semibold">São Paulo, SP</span>
+              </li>
+              <li class="flex items-center gap-4">
+                <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-r from-pink-400 to-yellow-400 text-white text-2xl shadow"><svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor' class='w-7 h-7'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 8v4l3 3' /></svg></span>
+                <span class="font-semibold">Seg-Sex: 8h às 18h</span>
+              </li>
+            </ul>
+            <div class="flex gap-6 mt-4">
+              <a href="https://www.facebook.com/fastdkprint/" class="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 transition-all neon-glow text-3xl" target="_blank"><span class="font-bold">f</span></a>
+              <a href="https://www.instagram.com/explore/locations/111919991400090/fast-impressao-digital-comunicacao-visual/recent/" class="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center hover:scale-110 transition-all neon-glow text-3xl" target="_blank"><span class="font-bold">@</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="border-t border-gray-800 mt-12 pt-6 text-center text-gray-400 text-sm w-full">
+        <p>&copy; 2025 FAST. Todos os direitos reservados.</p>
+      </div>
+    </main>
+
+    <!-- Ícone WhatsApp fixo -->
+    <a href="https://wa.me/5511957047767" target="_blank" aria-label="WhatsApp" style="position:fixed;right:30px;bottom:30px;z-index:1000;">
+      <img src="img/WhatsApp.png" alt="WhatsApp" style="width:52px;height:52px;display:block;">
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+    // Menu mobile robusto
+    document.querySelectorAll('.mobile-menu-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const menu = btn.closest('nav').querySelector('.mobile-menu');
+        if(menu) menu.classList.remove('opacity-0', 'pointer-events-none'), menu.classList.add('opacity-100');
+      });
+    });
+    document.querySelectorAll('.close-mobile-menu').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const menu = btn.closest('.mobile-menu');
+        if(menu) menu.classList.add('opacity-0', 'pointer-events-none'), menu.classList.remove('opacity-100');
+      });
+    });
+    </script>
+</body>
+</html> 

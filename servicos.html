@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Fast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'glow-pulse': 'glow-pulse 2s ease-in-out infinite alternate',
+                        'slide-up': 'slide-up 0.8s ease-out',
+                        'fade-in': 'fade-in 1s ease-out',
+                        'scale-bounce': 'scale-bounce 0.6s ease-out',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- Header NAV sempre no topo -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md shadow-lg border-b border-white/10" style="height: 56px; min-height: 56px;">
+        <div class="max-w-7xl mx-auto flex items-center justify-center md:justify-between px-2 md:px-6 py-0 relative" style="height: 56px; min-height: 56px;">
+            <div class="relative flex-shrink-0" style="height: 56px;">
+                <img src="img/logotipo.png" alt="Fast Impressão Digital"
+                     style="height: 100px; margin-top: -25px; margin-bottom: 4px; position: static; display: block;">
+                </div>
+            <div class="flex items-center ml-2">
+                <button class="mobile-menu-btn flex md:hidden items-center justify-center w-10 h-10 text-white border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Abrir menu">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-menu fixed inset-0 bg-black/30 backdrop-blur-lg z-50 hidden flex items-center justify-center min-h-screen">
+                <div class="absolute inset-0 bg-black/20 backdrop-blur-xl"></div>
+                <div class="relative z-10 w-11/12 max-w-md mx-auto bg-white/10 backdrop-blur-2xl rounded-3xl shadow-2xl flex flex-col items-center justify-center py-20 px-8 space-y-12 min-h-[90vh] max-h-[95vh] overflow-y-auto border border-white/20">
+                    <button class="close-mobile-menu absolute top-6 right-6 text-white text-4xl">&times;</button>
+                    <a href="index.html" class="hover:text-pink-400 transition-all text-2xl font-bold">Home</a>
+                    <a href="quem-somos.html" class="hover:text-pink-400 transition-all text-2xl font-bold">Quem Somos</a>
+                    <a href="servicos.html" class="hover:text-blue-400 transition-all text-2xl font-bold">Serviços</a>
+                    <a href="trabalhe-conosco.html" class="hover:text-green-400 transition-all text-2xl font-bold">Revendedor</a>
+                    <a href="contato.html" class="hover:text-yellow-400 transition-all text-2xl font-bold">Contato</a>
+                </div>
+            </div>
+            <div class="hidden md:flex space-x-8 ml-4">
+                <a href="index.html" class="hover:text-pink-400 transition-all duration-300 font-medium">Home</a>
+                <a href="quem-somos.html" class="hover:text-pink-400 transition-all duration-300 font-medium">Quem Somos</a>
+                <a href="servicos.html" class="hover:text-blue-400 transition-all duration-300 font-medium">Serviços</a>
+                <a href="trabalhe-conosco.html" class="hover:text-green-400 transition-all duration-300 font-medium">Revendedor</a>
+                <a href="contato.html" class="hover:text-yellow-400 transition-all duration-300 font-medium">Contato</a>
+            </div>
+            <button class="hidden md:block bg-gradient-to-r from-pink-500 to-blue-500 px-4 md:px-6 py-2 rounded-full font-bold neon-glow text-sm md:text-base ml-4" onclick="window.open('https://wa.me/5511957047767','_blank')">
+                ORÇAMENTO GRÁTIS
+            </button>
+        </div>
+    </nav>
+    <div style="margin-top:56px;"></div>
+
+    <!-- Serviços & Diferenciais -->
+    <section id="servicos" class="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <!-- Carrossel de Serviços -->
+            <div class="relative overflow-hidden rounded-3xl shadow-2xl mb-12" style="min-height: 320px;">
+                <div id="carousel-servicos-bg" class="absolute inset-0 transition-all duration-1000 ease-in-out" style="background-size: cover; background-position: center; background-repeat: no-repeat; filter: brightness(0.45);"></div>
+                <div class="absolute inset-0 bg-gradient-to-br from-black/60 to-blue-900/40 pointer-events-none"></div>
+                <div class="relative z-10 flex flex-col items-center justify-center text-center py-16 px-4 min-h-[320px]">
+                    <div id="carousel-servicos-slide" class="transition-all duration-700">
+                        <!-- Conteúdo do slide será inserido via JS -->
+                    </div>
+                    <div class="flex justify-center mt-6 space-x-2" id="carousel-servicos-indicators">
+                        <!-- Indicadores -->
+                    </div>
+                </div>
+            </div>
+         
+    </section>
+
+    <!-- NOVA SEÇÃO SERVIÇOS 2 -->
+    <section id="servicos2" class="relative py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+        <div id="servicos2-bg-carousel" class="absolute inset-0 transition-all duration-1000 ease-in-out z-0" style="background: url('img/carrocel/IMPRESSÃO.png') center center / cover no-repeat;"></div>
+        <div class="absolute inset-0 bg-black/70 z-10 pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-20">
+            <div class="text-center mb-6 sm:mb-8 md:mb-10">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black gradient-text mb-4 sm:mb-6 scroll-reveal">CONHEÇA NOSSOS SERVIÇOS:</h2>
+                <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-4 sm:mb-6 scroll-reveal">
+                    Aqui na <span class="font-bold text-yellow-400">FAST IMPRESSÃO DIGITAL</span>, atendemos o seu projeto desde a criação de arte, execução e instalação.<br><br>
+                    A <span class="font-bold text-pink-400">Comunicação Visual</span> é a alma da sua empresa! É através dela que o seu público reconhece e se conecta com a sua marca. Na Fast transformamos sua ideia em projetos de alto impacto.
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+                <!-- Card 1 -->
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm">
+                    <img src="img/carrocel/img15.jpeg" alt="Adesivo perfurado" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Adesivo perfurado</h3>
+                        <p class="text-gray-200 text-xs md:text-base mt-1 mb-3">Solução ideal para vitrines e veículos. Comunicação visual impactante com privacidade e passagem de luz natural.</p>
+                        <button class="block sm:hidden mt-1 px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-xs font-semibold shadow transition-all w-max mx-auto">Ler mais</button>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/ADESIVO JATEADO.png')">
+                    <img src="img/carrocel/ADESIVO JATEADO.png" alt="Adesivo jateado" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Adesivo jateado</h3>
+                        <p class="text-gray-200 text-xs md:text-base mt-1 mb-3">O adesivo jateado pode ser aplicado em ambientes internos e externos, trazendo um efeito visual semelhante ao vidro jateado em superfícies de vidro. Não impede a passagem de luz, mas traz privacidade impedindo uma visão clara através do vidro.</p>
+                        <button class="block sm:hidden mt-1 px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-xs font-semibold shadow transition-all w-max mx-auto">Ler mais</button>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/img5.jpeg')">
+                    <img src="img/carrocel/img5.jpeg" alt="Adesivos e lacres" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Adesivos e lacres</h3>
+                        <p class="text-gray-200 text-xs md:text-base mt-1 mb-3">Adesivos personalizados com impressão em alta qualidade e acabamento. Lacre de segurança para garantir a não violação do seu produto no trajeto.</p>
+                        <button class="block sm:hidden mt-1 px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-xs font-semibold shadow transition-all w-max mx-auto">Ler mais</button>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/ENCADERNAÇÃO 1.png')">
+                    <img src="img/carrocel/ENCADERNAÇÃO 1.png" alt="Impressão e encadernação em espiral" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Impressão e encadernação em espiral</h3>
+                        <p class="text-gray-200 text-xs md:text-base mt-1 mb-3">Muito utilizada para trabalhos escolares e universitários, apostilas ou relatórios empresariais.</p>
+                        <button class="block sm:hidden mt-1 px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-xs font-semibold shadow transition-all w-max mx-auto">Ler mais</button>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/ADESIVO PLOTADO 2.png')">
+                    <img src="img/carrocel/ADESIVO PLOTADO 2.png" alt="Plotagem" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Plotagem</h3>
+                        <p class="text-gray-200 text-xs md:text-base mt-1 mb-3">Utilizados geralmente em vitrines, veículos, placas e decoração, com alta durabilidade e resistência à mudanças de temperaturas.</p>
+                        <button class="block sm:hidden mt-1 px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-xs font-semibold shadow transition-all w-max mx-auto">Ler mais</button>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/MATERIAIS GRAFICOS 2.png')">
+                    <img src="img/carrocel/MATERIAIS GRAFICOS 2.png" alt="Materiais Gráficos" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Materiais Gráficos</h3>
+                        <p class="text-gray-200 text-xs md:text-base mt-1 mb-3">Materiais Gráficos de alta qualidade para destacar a sua marca no mercado! Cartões de visita, panfletos e folders.</p>
+                        <button class="block sm:hidden mt-1 px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-xs font-semibold shadow transition-all w-max mx-auto">Ler mais</button>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/BANNER ROLLUP 1.png')">
+                    <img src="img/carrocel/BANNER ROLLUP 1.png" alt="Banner rollup" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Banner rollup</h3>
+                        <p class="text-gray-200 text-xs md:text-base mt-1 mb-3">Com acabamento slim e prático, permitindo uma comunicação assertiva. Possui um suporte metálico com sistema de enrolamento, com maior durabilidade não só da estrutura, mas também da comunicação impressa, por ficar "guardada" quando o banner é fechado. Sistema simples, prático e sofisticado!</p>
+                        <button class="block sm:hidden mt-1 px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-xs font-semibold shadow transition-all w-max mx-auto">Ler mais</button>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/img11.jpeg')">
+                    <img src="img/carrocel/img11.jpeg" alt="Placa em Acm / Lona Impressa e PS cristal" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Placa em Acm / Lona Impressa e PS cristal</h3>
+                        <p class="text-gray-200 text-xs md:text-base mt-1 mb-3">A fachada de um estabelecimento é o primeiro contato visual que o cliente tem com o negócio. Por isso, a placa na fachada exerce um papel fundamental na comunicação visual da empresa. Mais do que um simples item decorativo, ela é uma poderosa ferramenta de marketing e identificação.</p>
+                        <button class="block sm:hidden mt-1 px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-xs font-semibold shadow transition-all w-max mx-auto">Ler mais</button>
+                    </div>
+                </div>
+                <!-- Card 9 -->
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/PAPEL DE PAREDE 1.png')">
+                    <img src="img/carrocel/PAPEL DE PAREDE 1.png" alt="Papel de parede" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Papel de parede</h3>
+                        <p class="text-gray-200 text-xs md:text-base mt-1 mb-3">Quer dar vida nova ao seu espaço de forma rápida, prática e com muito estilo?! O papel de parede impresso personalizado é a escolha ideal para transformar ambientes com personalidade e exclusividade!</p>
+                        <button class="block sm:hidden mt-1 px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-xs font-semibold shadow transition-all w-max mx-auto">Ler mais</button>
+                    </div>
+                </div>
+                <!-- Card 10 -->
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/BANNER ROLLUP 2.png')">
+                    <img src="img/carrocel/BANNER ROLLUP 2.png" alt="Banner revenda" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Banner revenda</h3>
+                        <p class="text-gray-200 text-xs md:text-base mt-1 mb-3">Banner para revenda, ideal para comunicação visual de parceiros e revendedores.</p>
+                        <button class="block sm:hidden mt-1 px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-xs font-semibold shadow transition-all w-max mx-auto">Ler mais</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      <!-- Footer -->
+      <footer id="contato" class="bg-black py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Mapa ocupa as duas primeiras colunas -->
+                <div class="md:col-span-2 scroll-reveal">
+                    <div class="rounded-2xl overflow-hidden shadow-lg" style="min-height:200px;">
+                        <iframe
+                            src="https://www.google.com/maps?q=R.+Zambeze,+224+-+Vila+Carr%C3%A3o,+S%C3%A3o+Paulo+-+SP,+03441-000&output=embed"
+                            width="100%"
+                            height="200"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+                <!-- CONTATO -->
+                <div class="scroll-reveal">
+                    <h4 class="text-lg font-bold mb-3 text-yellow-400">CONTATO</h4>
+                    <ul class="space-y-1 text-gray-400 text-sm">
+                        <li>📱 (11)95704-7767</li>
+                        <li>✉️ fast.dkprint@gmail.com</li>
+                        <li>📍 São Paulo, SP</li>
+                        <li>🕒 Seg-Sex: 8h às 18h</li>
+                    </ul>
+                </div>
+                <!-- REDES SOCIAIS -->
+                <div class="scroll-reveal">
+                    <h4 class="text-lg font-bold mb-3 text-yellow-400">REDES SOCIAIS</h4>
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/fastdkprint/" class="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center hover:scale-110 transition-all neon-glow" target="_blank"><span class="font-bold text-sm">f</span></a>
+                        <a href="https://www.instagram.com/explore/locations/111919991400090/fast-impressao-digital-comunicacao-visual/recent/" class="w-10 h-10 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full flex items-center justify-center hover:scale-110 transition-all neon-glow" target="_blank"><span class="font-bold text-sm">@</span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; 2025 FAST. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FIM SERVIÇOS 2 -->
+
+    <!-- Modal para exibir imagem do serviço -->
+    <div id="modal-servico" class="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] hidden transition-all duration-1000 opacity-0">
+        <div class="relative max-w-lg w-full flex flex-col items-center">
+            <button onclick="closeModalServico()" class="absolute top-2 right-2 text-black text-4xl font-extrabold bg-white/70 backdrop-blur-md shadow-2xl border-2 border-blue-400 rounded-full w-14 h-14 flex items-center justify-center hover:bg-blue-500 hover:text-white hover:scale-110 hover:border-blue-700 transition-all duration-200 z-30" style="box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 0 1.5px 0 0 #60a5fa;">&times;</button>
+            <img id="modal-servico-img" src="" alt="Imagem do serviço" class="max-h-[70vh] w-auto rounded-2xl shadow-2xl border-4 border-white transition-all duration-1000 scale-95 opacity-0">
+        </div>
+    </div>
+
+    <!-- Ícone WhatsApp fixo -->
+    <a href="https://wa.me/5511957047767" target="_blank" aria-label="WhatsApp" style="position:fixed;right:30px;bottom:30px;z-index:1000;">
+      <img src="img/WhatsApp.png" alt="WhatsApp" style="width:52px;height:52px;display:block;">
+    </a>
+
+    <script src="js/main.js"></script>
+
+    <script>
+    function openModalServico(imgSrc) {
+        const modal = document.getElementById('modal-servico');
+        const modalImg = document.getElementById('modal-servico-img');
+        modalImg.src = imgSrc;
+        modal.classList.remove('hidden');
+        setTimeout(() => {
+            modal.classList.remove('opacity-0');
+            modalImg.classList.remove('scale-95', 'opacity-0');
+            modalImg.classList.add('scale-100', 'opacity-100');
+        }, 10);
+    }
+
+    function closeModalServico() {
+        const modal = document.getElementById('modal-servico');
+        const modalImg = document.getElementById('modal-servico-img');
+        modal.classList.add('opacity-0');
+        modalImg.classList.remove('scale-100', 'opacity-100');
+        modalImg.classList.add('scale-95', 'opacity-0');
+        setTimeout(() => {
+            modal.classList.add('hidden');
+        }, 300);
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Fade-up animado para os cards de serviços 2
+        const cards = document.querySelectorAll('#servicos2 .grid > div.bg-gray-900\\/80');
+        cards.forEach((card, i) => {
+            setTimeout(() => {
+                card.classList.remove('opacity-0', 'translate-y-8');
+                card.classList.add('opacity-100', 'translate-y-0');
+            }, 200 + i * 180);
+        });
+    });
+
+    // Carrossel de Serviços - dados dos slides
+    const servicosSlides = [
+      {
+        icon: '🏷️',
+        title: 'Adesivos',
+        desc: 'Adesivos perfurados, jateados, plotados e personalizados para todos os tipos de aplicação.',
+        bg: 'img/carrocel/img5.jpeg'
+      },
+      {
+        icon: '🖼️',
+        title: 'Banners',
+        desc: 'Banners rollup, lona impressa e materiais para comunicação visual de alto impacto.',
+        bg: 'img/carrocel/BANNER ROLLUP 1.png'
+      },
+      {
+        icon: '📄',
+        title: 'Materiais Gráficos',
+        desc: 'Cartões de visita, panfletos, folders e impressões profissionais para sua marca.',
+        bg: 'img/carrocel/MATERIAIS GRAFICOS 2.png'
+      },
+      {
+        icon: '🏢',
+        title: 'Placas',
+        desc: 'Placas em ACM, lona impressa e PS cristal para fachadas e identificação visual.',
+        bg: 'img/carrocel/img11.jpeg'
+      },
+      {
+        icon: '🖌️',
+        title: 'Papel de Parede',
+        desc: 'Papel de parede impresso personalizado para transformar ambientes com exclusividade.',
+        bg: 'img/carrocel/PAPEL DE PAREDE 2.png'
+      },
+      {
+        icon: '📚',
+        title: 'Encadernação',
+        desc: 'Impressão e encadernação em espiral para trabalhos, apostilas e relatórios.',
+        bg: 'img/carrocel/ENCADERNAÇÃO 1.png'
+      }
+    ];
+    let servicosCurrent = 0;
+    let servicosInterval = null;
+    function renderServicosSlide(idx) {
+      const slide = servicosSlides[idx];
+      document.getElementById('carousel-servicos-bg').style.backgroundImage = `url('${slide.bg}')`;
+      document.getElementById('carousel-servicos-slide').innerHTML = `
+        <div class="flex flex-col items-center justify-center">
+          <div class="text-6xl mb-4">${slide.icon}</div>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-blue-300 mb-3">${slide.title}</h2>
+          <p class="text-lg sm:text-xl text-gray-100 max-w-xl mx-auto">${slide.desc}</p>
+        </div>
+      `;
+      // Indicadores
+      const indicators = servicosSlides.map((_, i) =>
+        `<button class="w-3 h-3 rounded-full mx-1 ${i===idx?'bg-blue-400':'bg-gray-400/50'} border-2 border-white focus:outline-none" onclick="setServicosSlide(${i})"></button>`
+      ).join('');
+      document.getElementById('carousel-servicos-indicators').innerHTML = indicators;
+    }
+    function setServicosSlide(idx) {
+      servicosCurrent = idx;
+      renderServicosSlide(idx);
+      clearInterval(servicosInterval);
+      servicosInterval = setInterval(nextServicosSlide, 5000);
+    }
+    function nextServicosSlide() {
+      servicosCurrent = (servicosCurrent + 1) % servicosSlides.length;
+      renderServicosSlide(servicosCurrent);
+    }
+    // Inicialização
+    document.addEventListener('DOMContentLoaded', () => {
+      renderServicosSlide(servicosCurrent);
+      servicosInterval = setInterval(nextServicosSlide, 5000);
+    });
+
+    // Carrossel de fundo da seção dos cards de serviços
+    const servicos2BgImgs = [
+      'img/carrocel/IMPRESSÃO.png',
+      'img/carrocel/BACKDROP.png',
+      'img/carrocel/ADESIVO PLOTADO 1.png',
+      'img/carrocel/ADESIVO JATEADO.png',
+      'img/carrocel/MATERIAIS GRAFICOS 1.png'
+    ];
+    let servicos2BgIdx = 0;
+    function trocarBgServicos2() {
+      servicos2BgIdx = (servicos2BgIdx + 1) % servicos2BgImgs.length;
+      const bgDiv = document.getElementById('servicos2-bg-carousel');
+      if (bgDiv) {
+        bgDiv.style.backgroundImage = `url('${servicos2BgImgs[servicos2BgIdx]}')`;
+      }
+    }
+    setInterval(trocarBgServicos2, 4000);
+
+    // Menu mobile robusto
+    document.querySelectorAll('.mobile-menu-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const menu = btn.closest('nav').querySelector('.mobile-menu');
+        if(menu) {
+          menu.classList.remove('hidden');
+          menu.classList.add('flex');
+        }
+      });
+    });
+    document.querySelectorAll('.close-mobile-menu').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const menu = btn.closest('.mobile-menu');
+        if(menu) {
+          menu.classList.add('hidden');
+          menu.classList.remove('flex');
+        }
+      });
+    });
+    </script>
+</body>
+</html> 
