@@ -8,32 +8,40 @@ let countersStarted = false;
                 const duration = 2000;
                 const frameRate = 60;
                 const totalFrames = Math.round(duration / (1000 / frameRate));
-                const increment = target / totalFrames;
-                let current = reverse ? target : 0;
+                let increment, current, displayValue;
+                if (suffix === 'K+') {
+                    increment = (target * 1000) / totalFrames;
+                    current = reverse ? target * 1000 : 0;
+                } else {
+                    increment = target / totalFrames;
+                    current = reverse ? target : 0;
+                }
 
                 function update() {
-                    if (!reverse && current < target) {
+                    if (!reverse && current < (suffix === 'K+' ? target * 1000 : target)) {
                         current += increment;
-                        if (current > target) current = target;
+                        if (current > (suffix === 'K+' ? target * 1000 : target)) current = (suffix === 'K+' ? target * 1000 : target);
                         if (suffix === 'K+') {
-                            counter.textContent = Math.floor(current / 1000) + 'K+';
+                            displayValue = Math.floor(current / 1000) + 'K+';
                         } else {
-                            counter.textContent = Math.floor(current) + suffix;
+                            displayValue = Math.floor(current) + suffix;
                         }
+                        counter.textContent = displayValue;
                         requestAnimationFrame(update);
                     } else if (reverse && current > 0) {
                         current -= increment;
                         if (current < 0) current = 0;
                         if (suffix === 'K+') {
-                            counter.textContent = Math.floor(current / 1000) + 'K+';
+                            displayValue = Math.floor(current / 1000) + 'K+';
                         } else {
-                            counter.textContent = Math.floor(current) + suffix;
+                            displayValue = Math.floor(current) + suffix;
                         }
+                        counter.textContent = displayValue;
                         requestAnimationFrame(update);
                     } else {
                         if (!reverse) {
                             if (suffix === 'K+') {
-                                counter.textContent = Math.floor(target / 1000) + 'K+';
+                                counter.textContent = target + 'K+';
                             } else {
                                 counter.textContent = target + suffix;
                             }

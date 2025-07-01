@@ -29,9 +29,11 @@
     <nav class="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md shadow-lg border-b border-white/10" style="height: 56px; min-height: 56px;">
         <div class="max-w-7xl mx-auto flex items-center justify-center md:justify-between px-2 md:px-6 py-0 relative" style="height: 56px; min-height: 56px;">
             <div class="relative flex-shrink-0" style="height: 56px;">
-                <img src="img/logotipo.png" alt="Fast Impressão Digital"
-                     style="height: 100px; margin-top: -25px; margin-bottom: 4px; position: static; display: block;">
-                </div>
+                <a href="index.html">
+                    <img src="img/logotipo.png" alt="Fast Impressão Digital"
+                         style="height: 100px; margin-top: -25px; margin-bottom: 4px; position: static; display: block;">
+                </a>
+            </div>
             <div class="flex items-center ml-2">
                 <button class="mobile-menu-btn flex md:hidden items-center justify-center w-10 h-10 text-white border border-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400" aria-label="Abrir menu">
                     <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -90,14 +92,16 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-20">
             <div class="text-center mb-6 sm:mb-8 md:mb-10">
                 <h2 class="text-3xl sm:text-4xl md:text-5xl font-black gradient-text mb-4 sm:mb-6 scroll-reveal">CONHEÇA NOSSOS SERVIÇOS:</h2>
-                <p class="text-sm sm:text-base md:text-lg lg:text-xl text-gray-200 mb-4 sm:mb-6 scroll-reveal">
-                    Aqui na <span class="font-bold text-yellow-400">FAST IMPRESSÃO DIGITAL</span>, atendemos o seu projeto desde a criação de arte, execução e instalação.<br><br>
-                    A <span class="font-bold text-pink-400">Comunicação Visual</span> é a alma da sua empresa! É através dela que o seu público reconhece e se conecta com a sua marca. Na Fast transformamos sua ideia em projetos de alto impacto.
-                </p>
+                <div class="text-lg text-gray-200 mb-4 sm:mb-6 scroll-reveal font-semibold max-w-3xl mx-auto space-y-3">
+                    <p>Aqui na <span class="font-bold text-yellow-400">FAST IMPRESSÃO DIGITAL</span>, atendemos o seu projeto desde a <span class="text-pink-400 font-bold">criação de arte</span>, execução e instalação.</p>
+                    <p><span class="text-pink-400 font-bold">A Comunicação Visual</span> é a alma da sua empresa! É através dela que o seu público reconhece e se conecta com a sua marca. Na <span class="font-bold text-yellow-400">Fast</span> transformamos sua ideia em projetos de <span class="text-blue-400 font-bold">alto impacto</span>.</p>
+                    <p><span class="text-blue-400 font-bold">Envelopamento de fachadas</span>, letras em <span class="text-yellow-400 font-bold">PVC expandido</span>, banners, faixas, sinalização interna e externa, wobbler, plaquinha de QR code, cavalete, materiais promocionais para <span class="text-pink-400 font-bold">PDV (Pontos de Venda)</span>, backdrop e muito mais.</p>
+                    <p class="mt-2 text-xl text-yellow-300 font-extrabold">Dê vida às suas <span class="text-pink-400">IDEIAS</span> com Impressão Digital de Alta Qualidade!</p>
+                </div>
             </div>
             <div class="grid grid-cols-2 gap-3">
                 <!-- Card 1 -->
-                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm">
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm" onclick="openModalServicoCarousel(['img/carrocel/img15.jpeg','img/carrocel/img22.jpeg'])">
                     <img src="img/carrocel/img15.jpeg" alt="Adesivo perfurado" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
                     <div class="flex-1 flex flex-col justify-between h-full">
                         <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Adesivo perfurado</h3>
@@ -106,7 +110,7 @@
                     </div>
                 </div>
                 <!-- Card 2 -->
-                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/ADESIVO JATEADO.png')">
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServicoCarousel(['img/carrocel/ADESIVO JATEADO.png'])">
                     <img src="img/carrocel/ADESIVO JATEADO.png" alt="Adesivo jateado" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
                     <div class="flex-1 flex flex-col justify-between h-full">
                         <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Adesivo jateado</h3>
@@ -115,7 +119,7 @@
                     </div>
                 </div>
                 <!-- Card 3 -->
-                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/img5.jpeg')">
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServicoCarousel(['img/carrocel/img23.jpeg','img/carrocel/img24.jpeg','img/carrocel/img25.jpeg'])">
                     <img src="img/carrocel/img5.jpeg" alt="Adesivos e lacres" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
                     <div class="flex-1 flex flex-col justify-between h-full">
                         <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Adesivos e lacres</h3>
@@ -124,7 +128,7 @@
                     </div>
                 </div>
                 <!-- Card 4 -->
-                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/ENCADERNAÇÃO 1.png')">
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServicoCarousel(['img/carrocel/ENCADERNAÇÃO 1.png','img/carrocel/ENCADERNAÇÃO 2.png'])">
                     <img src="img/carrocel/ENCADERNAÇÃO 1.png" alt="Impressão e encadernação em espiral" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
                     <div class="flex-1 flex flex-col justify-between h-full">
                         <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Impressão e encadernação em espiral</h3>
@@ -133,8 +137,8 @@
                     </div>
                 </div>
                 <!-- Card 5 -->
-                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/ADESIVO PLOTADO 2.png')">
-                    <img src="img/carrocel/ADESIVO PLOTADO 2.png" alt="Plotagem" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServicoCarousel(['img/carrocel/ADESIVO PLOTADO 1.png','img/carrocel/ADESIVO PLOTADO 2.png','img/carrocel/BANNER ROLLUP 1.png'])">
+                    <img src="img/carrocel/ADESIVO PLOTADO 1.png" alt="Plotagem" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
                     <div class="flex-1 flex flex-col justify-between h-full">
                         <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Plotagem</h3>
                         <p class="text-gray-200 text-xs md:text-base mt-1 mb-3">Utilizados geralmente em vitrines, veículos, placas e decoração, com alta durabilidade e resistência à mudanças de temperaturas.</p>
@@ -142,7 +146,7 @@
                     </div>
                 </div>
                 <!-- Card 6 -->
-                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/MATERIAIS GRAFICOS 2.png')">
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServicoCarousel(['img/carrocel/MATERIAIS GRAFICOS 1.png','img/carrocel/MATERIAIS GRAFICOS 2.png'])">
                     <img src="img/carrocel/MATERIAIS GRAFICOS 2.png" alt="Materiais Gráficos" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
                     <div class="flex-1 flex flex-col justify-between h-full">
                         <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Materiais Gráficos</h3>
@@ -151,7 +155,7 @@
                     </div>
                 </div>
                 <!-- Card 7 -->
-                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/BANNER ROLLUP 1.png')">
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServicoCarousel(['img/carrocel/BANNER ROLLUP 1.png','img/carrocel/BANNER ROLLUP 2.png'])">
                     <img src="img/carrocel/BANNER ROLLUP 1.png" alt="Banner rollup" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
                     <div class="flex-1 flex flex-col justify-between h-full">
                         <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Banner rollup</h3>
@@ -160,7 +164,7 @@
                     </div>
                 </div>
                 <!-- Card 8 -->
-                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/img11.jpeg')">
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServicoCarousel(['img/carrocel/img11.jpeg','img/carrocel/img30.jpeg','img/carrocel/img31.jpeg'])">
                     <img src="img/carrocel/img11.jpeg" alt="Placa em Acm / Lona Impressa e PS cristal" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
                     <div class="flex-1 flex flex-col justify-between h-full">
                         <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Placa em Acm / Lona Impressa e PS cristal</h3>
@@ -169,7 +173,7 @@
                     </div>
                 </div>
                 <!-- Card 9 -->
-                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/PAPEL DE PAREDE 1.png')">
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServicoCarousel(['img/carrocel/PAPEL DE PAREDE 1.png','img/carrocel/PAPEL DE PAREDE 2.png'])">
                     <img src="img/carrocel/PAPEL DE PAREDE 1.png" alt="Papel de parede" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
                     <div class="flex-1 flex flex-col justify-between h-full">
                         <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Papel de parede</h3>
@@ -178,10 +182,10 @@
                     </div>
                 </div>
                 <!-- Card 10 -->
-                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServico('img/carrocel/BANNER.png')">
-                    <img src="img/carrocel/BANNER.png" alt="Banner revenda" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
+                <div class="bg-gradient-to-br from-blue-900/80 via-gray-900/90 to-black/90 border-2 border-blue-500/20 rounded-3xl shadow-xl min-h-[180px] flex flex-col md:flex-row items-center text-center md:text-left p-2 sm:p-4 gap-3 sm:gap-5 transition-all duration-300 hover:scale-[1.03] hover:shadow-blue-400/30 group text-xs sm:text-sm cursor-pointer" onclick="openModalServicoCarousel(['img/carrocel/img31.jpeg'])">
+                    <img src="img/carrocel/img31.jpeg" alt="Wind Banner" class="w-32 h-32 object-cover rounded-2xl shadow-md border border-blue-400/40 mb-2 md:mb-0 transition-all duration-200 group-hover:scale-105">
                     <div class="flex-1 flex flex-col justify-between h-full">
-                        <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Banner revenda</h3>
+                        <h3 class="text-lg md:text-xl font-extrabold text-blue-300 mb-2 border-b-4 border-blue-400 pb-1 inline-block tracking-tight">Wind Banner</h3>
                         <p class="text-gray-200 text-xs md:text-base mt-1 mb-3">Banner para revenda, ideal para comunicação visual de parceiros e revendedores.</p>
                         <button class="block sm:hidden mt-1 px-3 py-1 bg-blue-500 hover:bg-blue-600 text-white rounded-full text-xs font-semibold shadow transition-all w-max mx-auto">Ler mais</button>
                     </div>
@@ -238,7 +242,11 @@
     <div id="modal-servico" class="fixed inset-0 bg-black/80 flex items-center justify-center z-[9999] hidden transition-all duration-1000 opacity-0">
         <div class="relative max-w-lg w-full flex flex-col items-center">
             <button onclick="closeModalServico()" class="absolute top-2 right-2 text-black text-4xl font-extrabold bg-white/70 backdrop-blur-md shadow-2xl border-2 border-blue-400 rounded-full w-14 h-14 flex items-center justify-center hover:bg-blue-500 hover:text-white hover:scale-110 hover:border-blue-700 transition-all duration-200 z-30" style="box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37), 0 1.5px 0 0 #60a5fa;">&times;</button>
-            <img id="modal-servico-img" src="" alt="Imagem do serviço" class="max-h-[70vh] w-auto rounded-2xl shadow-2xl border-4 border-white transition-all duration-1000 scale-95 opacity-0">
+            <div class="relative w-full flex items-center justify-center">
+                <button id="modal-servico-prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-blue-500 text-black hover:text-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow transition-all duration-200 z-20" style="left:-2.5rem;">&#8592;</button>
+                <img id="modal-servico-img" src="" alt="Imagem do serviço" class="max-h-[70vh] w-auto rounded-2xl shadow-2xl border-4 border-white transition-all duration-1000 scale-95 opacity-0">
+                <button id="modal-servico-next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-blue-500 text-black hover:text-white rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold shadow transition-all duration-200 z-20" style="right:-2.5rem;">&#8594;</button>
+            </div>
         </div>
     </div>
 
@@ -250,17 +258,35 @@
     <script src="js/main.js"></script>
 
     <script>
-    function openModalServico(imgSrc) {
+    // Modal com carrossel de imagens para o serviço
+    let modalServicoImgs = [];
+    let modalServicoIdx = 0;
+    function openModalServicoCarousel(imgs) {
+        modalServicoImgs = imgs;
+        modalServicoIdx = 0;
+        updateModalServicoImg();
         const modal = document.getElementById('modal-servico');
-        const modalImg = document.getElementById('modal-servico-img');
-        modalImg.src = imgSrc;
         modal.classList.remove('hidden');
         setTimeout(() => {
             modal.classList.remove('opacity-0');
-            modalImg.classList.remove('scale-95', 'opacity-0');
-            modalImg.classList.add('scale-100', 'opacity-100');
+            document.getElementById('modal-servico-img').classList.remove('scale-95', 'opacity-0');
+            document.getElementById('modal-servico-img').classList.add('scale-100', 'opacity-100');
         }, 10);
     }
+    function updateModalServicoImg() {
+        const img = document.getElementById('modal-servico-img');
+        img.src = modalServicoImgs[modalServicoIdx];
+    }
+    document.getElementById('modal-servico-prev').onclick = function(e) {
+        e.stopPropagation();
+        modalServicoIdx = (modalServicoIdx - 1 + modalServicoImgs.length) % modalServicoImgs.length;
+        updateModalServicoImg();
+    };
+    document.getElementById('modal-servico-next').onclick = function(e) {
+        e.stopPropagation();
+        modalServicoIdx = (modalServicoIdx + 1) % modalServicoImgs.length;
+        updateModalServicoImg();
+    };
 
     function closeModalServico() {
         const modal = document.getElementById('modal-servico');
