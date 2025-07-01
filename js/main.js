@@ -148,11 +148,10 @@ let countersStarted = false;
         }
         typeWriterLoop();
 
-        // HERO background rotativo com fade + zoom para 3 imagens
+        // HERO background rotativo com fade + zoom para 2 imagens (removido hero-bg-2)
         (function() {
             const heroBgs = [
                 document.getElementById('hero-bg-1'),
-                document.getElementById('hero-bg-2'),
                 document.getElementById('hero-bg-3')
             ];
             let current = 0;
