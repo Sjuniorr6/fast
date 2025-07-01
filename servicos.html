@@ -352,73 +352,72 @@
     let servicosCurrent = 0;
     let servicosInterval = null;
     function renderServicosSlide(idx) {
-      const slide = servicosSlides[idx];
-      document.getElementById('carousel-servicos-bg').style.backgroundImage = `url('${slide.bg}')`;
-      document.getElementById('carousel-servicos-slide').innerHTML = `
-        <div class="flex flex-col items-center justify-center">
-          <div class="text-6xl mb-4">${slide.icon}</div>
-          <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-blue-300 mb-3">${slide.title}</h2>
-          <p class="text-lg sm:text-xl text-gray-100 max-w-xl mx-auto">${slide.desc}</p>
-        </div>
-      `;
-      // Indicadores
-      const indicators = servicosSlides.map((_, i) =>
-        `<button class="w-3 h-3 rounded-full mx-1 ${i===idx?'bg-blue-400':'bg-gray-400/50'} border-2 border-white focus:outline-none" onclick="setServicosSlide(${i})"></button>`
-      ).join('');
-      document.getElementById('carousel-servicos-indicators').innerHTML = indicators;
+        const slide = servicosSlides[idx];
+        document.getElementById('carousel-servicos-bg').style.backgroundImage = `url('${slide.bg}')`;
+        document.getElementById('carousel-servicos-slide').innerHTML = `
+            <div class="flex flex-col items-center justify-center">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-blue-300 mb-3">${slide.title}</h2>
+                <p class="text-lg sm:text-xl text-gray-100 max-w-xl mx-auto">${slide.desc}</p>
+            </div>
+        `;
+        // Indicadores
+        const indicators = servicosSlides.map((_, i) =>
+            `<button class="w-3 h-3 rounded-full mx-1 ${i===idx?'bg-blue-400':'bg-gray-400/50'} border-2 border-white focus:outline-none" onclick="setServicosSlide(${i})"></button>`
+        ).join('');
+        document.getElementById('carousel-servicos-indicators').innerHTML = indicators;
     }
     function setServicosSlide(idx) {
-      servicosCurrent = idx;
-      renderServicosSlide(idx);
-      clearInterval(servicosInterval);
-      servicosInterval = setInterval(nextServicosSlide, 5000);
+        servicosCurrent = idx;
+        renderServicosSlide(idx);
+        clearInterval(servicosInterval);
+        servicosInterval = setInterval(nextServicosSlide, 5000);
     }
     function nextServicosSlide() {
-      servicosCurrent = (servicosCurrent + 1) % servicosSlides.length;
-      renderServicosSlide(servicosCurrent);
+        servicosCurrent = (servicosCurrent + 1) % servicosSlides.length;
+        renderServicosSlide(servicosCurrent);
     }
     // Inicialização
     document.addEventListener('DOMContentLoaded', () => {
-      renderServicosSlide(servicosCurrent);
-      servicosInterval = setInterval(nextServicosSlide, 5000);
+        renderServicosSlide(servicosCurrent);
+        servicosInterval = setInterval(nextServicosSlide, 5000);
     });
 
     // Carrossel de fundo da seção dos cards de serviços
     const servicos2BgImgs = [
-      'img/carrocel/IMPRESSÃO.png',
-      'img/carrocel/BACKDROP.png',
-      'img/carrocel/ADESIVO PLOTADO 1.png',
-      'img/carrocel/ADESIVO JATEADO.png',
-      'img/carrocel/MATERIAIS GRAFICOS 1.png'
+        'img/carrocel/IMPRESSÃO.png',
+        'img/carrocel/BACKDROP.png',
+        'img/carrocel/ADESIVO PLOTADO 1.png',
+        'img/carrocel/ADESIVO JATEADO.png',
+        'img/carrocel/MATERIAIS GRAFICOS 1.png'
     ];
     let servicos2BgIdx = 0;
     function trocarBgServicos2() {
-      servicos2BgIdx = (servicos2BgIdx + 1) % servicos2BgImgs.length;
-      const bgDiv = document.getElementById('servicos2-bg-carousel');
-      if (bgDiv) {
-        bgDiv.style.backgroundImage = `url('${servicos2BgImgs[servicos2BgIdx]}')`;
-      }
+        servicos2BgIdx = (servicos2BgIdx + 1) % servicos2BgImgs.length;
+        const bgDiv = document.getElementById('servicos2-bg-carousel');
+        if (bgDiv) {
+            bgDiv.style.backgroundImage = `url('${servicos2BgImgs[servicos2BgIdx]}')`;
+        }
     }
     setInterval(trocarBgServicos2, 4000);
 
     // Menu mobile robusto
     document.querySelectorAll('.mobile-menu-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const menu = btn.closest('nav').querySelector('.mobile-menu');
-        if(menu) {
-          menu.classList.remove('hidden');
-          menu.classList.add('flex');
-        }
-      });
+        btn.addEventListener('click', () => {
+            const menu = btn.closest('nav').querySelector('.mobile-menu');
+            if(menu) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            }
+        });
     });
     document.querySelectorAll('.close-mobile-menu').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const menu = btn.closest('.mobile-menu');
-        if(menu) {
-          menu.classList.add('hidden');
-          menu.classList.remove('flex');
-        }
-      });
+        btn.addEventListener('click', () => {
+            const menu = btn.closest('.mobile-menu');
+            if(menu) {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        });
     });
     </script>
 </body>

@@ -421,3 +421,14 @@ let countersStarted = false;
                 img.src = '';
             }, 1000);
         }
+
+        function renderServicosSlide(idx) {
+            const slide = servicosSlides[idx];
+            document.getElementById('carousel-servicos-bg').style.backgroundImage = `url('${slide.bg}')`;
+            document.getElementById('carousel-servicos-slide').innerHTML = `
+                <div class="flex flex-col items-center justify-center">
+                    <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-blue-300 mb-3">${slide.title}</h2>
+                    <p class="text-lg sm:text-xl text-gray-100 max-w-xl mx-auto">${slide.desc}</p>
+                </div>
+            `;
+        }
