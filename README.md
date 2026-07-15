@@ -6,10 +6,8 @@ O site da Fast Impressão Digital foi reorganizado em múltiplas páginas HTML p
 
 ### 📁 Arquivos HTML
 
-- **`index.html`** - Página inicial com seção hero
-- **`quem-somos.html`** - Página "Quem Somos" com carrossel de imagens
-- **`servicos.html`** - Página de serviços com diferenciais e catálogo de produtos
-- **`trabalhe-conosco.html`** - Página para revendedores
+- **`index.html`** - Página inicial com hero e destaques
+- **`servicos.html`** - Página de serviços com catálogo de produtos
 - **`contato.html`** - Página de contato com mapa e informações
 
 ### 🎨 Características
@@ -23,9 +21,7 @@ O site da Fast Impressão Digital foi reorganizado em múltiplas páginas HTML p
 
 A navegação permite navegar entre as páginas:
 - **Início** → `index.html`
-- **Quem Somos** → `quem-somos.html`
 - **Serviços** → `servicos.html`
-- **Revendedor** → `trabalhe-conosco.html`
 - **Contato** → `contato.html`
 
 ### 📱 Recursos
