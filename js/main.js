@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.mobile-menu-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       const menu = document.querySelector('.mobile-menu');
-      if (menu) menu.classList.add('open');
+      if (menu) menu.classList.toggle('open');
     });
   });
   document.querySelectorAll('.close-mobile-menu').forEach((btn) => {
